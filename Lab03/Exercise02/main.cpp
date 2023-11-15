@@ -1,21 +1,20 @@
+// Esercizio 2
 #include <iostream>
+#include <ostream>
 constexpr int ARRAY_SIZE = 9;
 
-// void print_array_length(double a[ARRAY_SIZE]) {
-//   std::cout << sizeof(a) << std::endl;
-// }
-// Scritta così la funzione dà errore: "‘sizeof’ on array function parameter ‘a’
-// will return size of ‘double*’"
-// Ho provato poi a passare a sizeof() la reference dell'array, ma stampa una
-// dimensione errata (1 valore in meno rispetto all'array)
-void print_array_length(double a[ARRAY_SIZE]) {
-  std::cout << "print_array_length function array size: " << sizeof(&a)
-            << std::endl;
-}
+int print_array_length(double a[ARRAY_SIZE]);
 
 int main() {
-  double my_array[ARRAY_SIZE];
-  std::cout << "Main array size: " << sizeof(my_array) / 8 << std::endl;
-  print_array_length(my_array);
+  double my_double_array[ARRAY_SIZE];
+  std::cout << "Main array size: " << sizeof(my_double_array) / sizeof(double)
+            << std::endl;
+  std::cout << print_array_length(my_double_array) << std::endl;
   return 0;
 }
+
+int print_array_length(double a[ARRAY_SIZE]) { return sizeof(&a); }
+
+// Passandogli la reference dell'array allora la funzione può conoscerne la
+// dimensione
+// int print_array_length(double (&a)[ARRAY_SIZE]) { return sizeof(a); }

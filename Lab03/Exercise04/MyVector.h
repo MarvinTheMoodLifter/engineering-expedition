@@ -1,3 +1,5 @@
+// Esercizio 4
+
 #include <algorithm>
 
 class MyVector {
@@ -6,6 +8,8 @@ private:
   double *elem;
 
 public:
+  // Default Constructor
+  MyVector();
   // Constructor
   MyVector(int s);
 

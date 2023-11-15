@@ -1,13 +1,11 @@
+// Esercizio 4
+
 #include "MyVector.h"
 #include <algorithm>
 #include <stdexcept>
 
-//  includere:
-//  le funzioni safe_set() e safe_get() che permettono l'accesso agli elementi
-//    del vettore effettuando il controllo di accesso entro i limiti del
-//    vettore.
-//  Default constructor and dinamically allocated size
-
+// Default Constructor
+MyVector::MyVector() : sz{0}, elem{nullptr} {}
 // Constructor
 MyVector::MyVector(int s) : sz{s}, elem{new double[s]} {
   if (s == 0)
