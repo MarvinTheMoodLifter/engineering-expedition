@@ -1,2 +1,2 @@
 # Engineering Expedition
-## A quest for meaning in a meaningless universe.
+*A quest for meaning in a meaningless universe.*
