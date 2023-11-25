@@ -3,12 +3,10 @@
 #include <iostream>
 
 int main() {
-  Book myBook("Gino", "Pollo", "I culi della Caledonia", "1234567890123", true);
-  BookShelf myShelf(10);
-  myShelf.push_back(myBook);
-  std::cout << "push_back OK" << std::endl;
-  myShelf.pop_back();
-  std::cout << "pop_back OK" << std::endl;
+
+  Book mybook("David", "Foster Wallace",
+              "Una cosa divertente che non farò mai più", "887-521-837-4");
+  std::cout << mybook;
 
   return 0;
 }

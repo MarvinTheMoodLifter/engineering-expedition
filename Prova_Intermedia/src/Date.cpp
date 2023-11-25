@@ -4,7 +4,8 @@
 Date::Date() : y{1970}, m{1}, d{1} {}
 Date::Date(int yy, int mm, int dd) : y{yy}, m{mm}, d{dd} {
   if (!is_valid())
-    throw std::invalid_argument("Lunghezza ISBN non valida");
+    throw std::invalid_argument(
+        "Data non valida"); // correzione messaggio di errore
 }
 
 int Date::month(void) { return m; }

@@ -1,6 +1,7 @@
+#ifndef BOOK_H
+#define BOOK_H
 #include "Date.h"
 #include <string>
-
 
 class Book {
 private:
@@ -12,7 +13,6 @@ private:
   bool available;
   bool dateInserted;
 
-
 public:
   Book(std::string autName, std::string autSurname, std::string bookTitle,
        std::string bookIsbn, Date bookCopyrightsDate, bool bookIsAvailable);
@@ -21,24 +21,20 @@ public:
   Book(std::string autName, std::string autSurname, std::string bookTitle,
        std::string bookIsbn);
   Book(std::string autName, std::string autSurname, std::string bookTitle,
-	   std::string bookIsbn, Date bookCopyrightsDate);
+       std::string bookIsbn, Date bookCopyrightsDate);
   // se non c'e isbn da errore: "Manca isbn"
-std::string	getIsbn();
-std::string getTitle();
-std::string	getAuthorName();
-std::string	getAuthorSurname();
-Date getCopyrightsDate();
-bool getAvailable();
-void bookReturn();
-void bookLoan();	
-
-	
+  std::string getIsbn();
+  std::string getTitle();
+  std::string getAuthorName();
+  std::string getAuthorSurname();
+  Date getCopyrightsDate();
+  bool getAvailable();
+  void bookReturn();
+  void bookLoan();
 };
 
-
-
 bool operator==(Book a, Book b);
-	
+
 bool operator!=(Book a, Book b);
 
-void operator<<(std::ostream& out, Book a);
+void operator<<(std::ostream &out, Book a);
