@@ -94,3 +94,5 @@ void operator<<(std::ostream &out, Book a) {
               << "Data Copyright non inserita" << '\n';
   }
 }
+
+
