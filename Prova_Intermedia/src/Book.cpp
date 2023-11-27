@@ -1,6 +1,5 @@
 #include "../include/Book.h"
 #include <iostream>
-#include <stdexcept>
 
 Book::Book(std::string autName, std::string autSurname, std::string bookTitle,
            std::string bookIsbn, Date bookCopyrightsDate,
