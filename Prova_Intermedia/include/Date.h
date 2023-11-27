@@ -11,4 +11,6 @@ public:
   int day(void);
   int year(void);
   bool is_valid();
+  int isLeapYear();
+
 };
