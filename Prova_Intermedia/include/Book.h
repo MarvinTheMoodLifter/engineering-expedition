@@ -35,6 +35,8 @@ public:
   // Ho aggiunto piccola member function per poter ottenere il valore di
   // dateInserted
   bool isDateInserted();
+  String IsbnFragmenter(String IsbnToFragment);
+  
 };
 
 bool operator==(Book a, Book b);
