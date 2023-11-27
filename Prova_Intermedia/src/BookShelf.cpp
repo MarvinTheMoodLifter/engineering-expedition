@@ -12,6 +12,9 @@ BookShelf::BookShelf(int s) : sz{0}, bfr_capacity{s} {
     elem = new Book[s];
   }
 }
+// Overloading const and non const operator[]
+Book &BookShelf::operator[](int n) { return elem[n]; }
+Book BookShelf::operator[](int n) const { return elem[n]; }
 
 void BookShelf::push_back(Book mybook) {
   if (sz == bfr_capacity) {
@@ -73,7 +76,3 @@ int BookShelf::size() { return sz; }
 
 // Destructor
 BookShelf::~BookShelf() { delete[] elem; }
-
-// Overloading const and non const operator[]
-// Book &BookShelf::operator[](int n) { return elem[n]; }
-// Book BookShelf::operator[](int n) const { return elem[n]; }
