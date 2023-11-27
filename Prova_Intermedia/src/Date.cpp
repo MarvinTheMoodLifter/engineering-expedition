@@ -14,12 +14,15 @@ int Date::year(void) { return y; }
 bool Date::is_valid() {
 
   // Year > currentYear return false
-  // leap year (anni bisestili)
+  
+  int leapMonth = y.isLeapYear();
 
   if (m < 1 || m > 12)
     return false;
   if (d < 1)
     return false;
+
+   
   switch (m) {
 
   case 1:
@@ -33,7 +36,7 @@ bool Date::is_valid() {
       return false;
     break;
   case 2:
-    if (d > 29)
+    if (d > leapMonth)
       return false;
     break;
   case 4:
@@ -45,4 +48,28 @@ bool Date::is_valid() {
     break;
   }
   return true;
+}
+
+
+int Date::isLeapYear(){
+int februaryLeapYear=29;
+int februaryNotLeapYear=28;
+
+
+if(y%400==0){
+  return februaryLeapYear;
+}  
+  
+else if(y%100==0){
+  return februaryNotLeapYear;
+}
+
+else if(y%4==0){
+  return februaryLeapYear;
+} 
+
+else {
+
+  return februaryNotLeapYear;
+}  
 }

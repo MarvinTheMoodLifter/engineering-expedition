@@ -1,6 +1,5 @@
 #include "../include/Book.h"
 #include <iostream>
-#include <stdexcept>
 
 Book::Book(std::string autName, std::string autSurname, std::string bookTitle,
            std::string bookIsbn, Date bookCopyrightsDate,
@@ -68,20 +67,12 @@ void Book::bookLoan() { available = false; }
 bool Book::isDateInserted() { return dateInserted; }
 
 bool operator==(Book a, Book b) {
-  //  if (a.getIsbn() == b.getIsbn()) {
-  //    return true;
-  //  } else {
-  //    return false;
-  //  }
+
   return a.getIsbn() == b.getIsbn();
 }
 
 bool operator!=(Book a, Book b) {
-  //  if (a.getIsbn() == b.getIsbn()) {
-  //    return false;
-  //  } else {
-  //    return true;
-  //  }
+   
   return !(a.getIsbn() == b.getIsbn());
 }
 
@@ -102,3 +93,5 @@ void operator<<(std::ostream &out, Book a) {
               << "Data Copyright non inserita" << '\n';
   }
 }
+
+

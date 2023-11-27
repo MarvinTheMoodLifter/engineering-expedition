@@ -35,6 +35,7 @@ public:
   // Ho aggiunto piccola member function per poter ottenere il valore di
   // dateInserted
   bool isDateInserted();
+  
 };
 
 bool operator==(Book a, Book b);
