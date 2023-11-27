@@ -68,20 +68,12 @@ void Book::bookLoan() { available = false; }
 bool Book::isDateInserted() { return dateInserted; }
 
 bool operator==(Book a, Book b) {
-  //  if (a.getIsbn() == b.getIsbn()) {
-  //    return true;
-  //  } else {
-  //    return false;
-  //  }
+
   return a.getIsbn() == b.getIsbn();
 }
 
 bool operator!=(Book a, Book b) {
-  //  if (a.getIsbn() == b.getIsbn()) {
-  //    return false;
-  //  } else {
-  //    return true;
-  //  }
+   
   return !(a.getIsbn() == b.getIsbn());
 }
 
