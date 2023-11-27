@@ -32,6 +32,9 @@ public:
   bool getAvailable();
   void bookReturn();
   void bookLoan();
+  // Ho aggiunto piccola member function per poter ottenere il valore di
+  // dateInserted
+  bool isDateInserted();
 };
 
 bool operator==(Book a, Book b);
