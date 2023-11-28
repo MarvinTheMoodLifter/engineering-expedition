@@ -12,10 +12,12 @@ BookShelf::BookShelf(int s) : sz{0}, bfr_capacity{s} {
     elem = new Book[s];
   }
 }
+
 // Overloading const and non const operator[]
 Book &BookShelf::operator[](int n) { return elem[n]; }
 Book BookShelf::operator[](int n) const { return elem[n]; }
 
+// Add a Book type object to the end of the shelf
 void BookShelf::push_back(Book mybook) {
   if (sz == bfr_capacity) {
     reserve((bfr_capacity == 0) ? 1 : bfr_capacity * 2);
@@ -23,11 +25,15 @@ void BookShelf::push_back(Book mybook) {
   elem[sz] = mybook;
   sz++;
 }
+
+// Removes the last book from the shelf
 void BookShelf::pop_back() {
   if (sz > 0) {
     sz--;
   }
 }
+
+// Reserve space for 'n' books on the shelf
 void BookShelf::reserve(int n) {
   if (n > bfr_capacity) {
     Book *tmp = new Book[n];
@@ -72,6 +78,7 @@ BookShelf &BookShelf::operator=(BookShelf &&a) {
   return *this;
 }
 
+// Return the number of elements inside the shelf
 int BookShelf::size() { return sz; }
 
 // Destructor

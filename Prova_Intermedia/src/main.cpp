@@ -28,9 +28,6 @@ int main() {
   myBookShelf.push_back(myBook);
   myBookShelf.push_back(sameBook);
   myBookShelf.push_back(differentBook);
-  //  for (int i = 0; i < myBookShelf.size(); i++) {
-  //    std::cout << myBookShelf[i];
-  //  }
   myBookShelf.pop_back();
   for (int i = 0; i < myBookShelf.size(); i++) {
     std::cout << myBookShelf[i];
