@@ -23,7 +23,7 @@ La classe `Book` deve permette di eseguire la seguente operazione:
 ```cpp
 Book myBook("David", "Foster Wallace", "Una cosa divertente che non farò mai più", "887-521-837-4")
 ```
-2. Modificare opportunamente la classe MyVector implementata durante i precedenti laboratori per creare una classe BookShelf che gestisce vettori di elementi Book. Tramite la classe BookShelf dovranno essere compilabili le seguenti istruzioni:
+2. Modificare opportunamente la classe `MyVector` implementata durante i precedenti laboratori per creare una classe `BookShelf` che gestisce vettori di elementi `Book`. Tramite la classe `BookShelf` dovranno essere compilabili le seguenti istruzioni:
 ```cpp
 BookShelf shelf(10);        // Crea un vettore di 10 elementi Book
 shelf.push_back(mybook);    // Aggiunge l'elemento mybook al vettore shelf;
