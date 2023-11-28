@@ -32,6 +32,7 @@ shelf.pop_back();           // Rimuove l'ultimo elemento (se esiste) dal vettore
 ```
 
 ## Folder structure
+```bash
 Prova_Intermedia/
 ├── build
 ├── CMakeLists.txt
@@ -45,3 +46,4 @@ Prova_Intermedia/
     ├── BookShelf.cpp
     ├── Date.cpp
     └── main.cpp
+```
