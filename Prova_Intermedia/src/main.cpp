@@ -1,10 +1,10 @@
-#include "../include/Book.h"
-#include "../include/BookShelf.h"
+#include "Book.h"
+#include "BookShelf.h"
 #include <iostream>
-#include <ostream>
 
 int main() {
 
+  std::cout << "Started" << std::endl;
   Book myBook("David", "Foster Wallace",
               "Una cosa divertente che non farò mai più", "887-521-837-4");
   std::cout << myBook;
