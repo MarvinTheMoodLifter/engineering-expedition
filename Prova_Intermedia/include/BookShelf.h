@@ -1,6 +1,6 @@
 #ifndef BOOKSHELF_H
 #define BOOKSHELF_H
-#include "../include/Book.h"
+#include "Book.h"
 #include <algorithm>
 
 class BookShelf {

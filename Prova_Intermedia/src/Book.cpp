@@ -1,14 +1,16 @@
-#include "../include/Book.h"
+#include "Book.h"
 #include <iostream>
+#include <stdexcept>
+
+// Default Constructor
+// Book::Book() { isbn = "000-000-000-0"; }
+Book::Book() = default;
 
 // Constructor with every parameter
 Book::Book(std::string autName, std::string autSurname, std::string bookTitle,
            std::string bookIsbn, Date bookCopyrightsDate,
            bool bookIsAvailable) {
-  if (bookIsbn.size() != 13) {
-    throw std::invalid_argument(
-        "Invalid ISBN argument: It must be 13 characters long");
-  }
+  isbnIsValid(bookIsbn);
   authorName = autName;
   authorSurname = autSurname;
   title = bookTitle;
@@ -21,10 +23,7 @@ Book::Book(std::string autName, std::string autSurname, std::string bookTitle,
 // Constructor without Copyright Date
 Book::Book(std::string autName, std::string autSurname, std::string bookTitle,
            std::string bookIsbn, bool bookIsAvailable) {
-  if (bookIsbn.size() != 13) {
-    throw std::invalid_argument(
-        "Invalid ISBN argument: It must be 13 characters long");
-  }
+  isbnIsValid(bookIsbn);
   authorName = autName;
   authorSurname = autSurname;
   title = bookTitle;
@@ -36,10 +35,7 @@ Book::Book(std::string autName, std::string autSurname, std::string bookTitle,
 // Constructor without Copyright Date and Availability
 Book::Book(std::string autName, std::string autSurname, std::string bookTitle,
            std::string bookIsbn) {
-  if (bookIsbn.size() != 13) {
-    throw std::invalid_argument(
-        "Invalid ISBN argument: It must be 13 characters long");
-  }
+  isbnIsValid(bookIsbn);
   authorName = autName;
   authorSurname = autSurname;
   title = bookTitle;
@@ -50,10 +46,7 @@ Book::Book(std::string autName, std::string autSurname, std::string bookTitle,
 // Constructor without Availability
 Book::Book(std::string autName, std::string autSurname, std::string bookTitle,
            std::string bookIsbn, Date bookCopyrightsDate) {
-  if (bookIsbn.size() != 13) {
-    throw std::invalid_argument(
-        "Invalid ISBN argument: It must be 13 characters long");
-  }
+  isbnIsValid(bookIsbn);
   authorName = autName;
   authorSurname = autSurname;
   title = bookTitle;
@@ -63,23 +56,30 @@ Book::Book(std::string autName, std::string autSurname, std::string bookTitle,
 }
 
 // Return ISBN of the Book
-std::string Book::getIsbn() { return isbn; }
+std::string Book::getIsbn() const { return isbn; }
 // Return Title of the Book
-std::string Book::getTitle() { return title; }
+std::string Book::getTitle() const { return title; }
 // Return Book's author name
-std::string Book::getAuthorName() { return authorName; }
+std::string Book::getAuthorName() const { return authorName; }
 // Return Book's author surname
-std::string Book::getAuthorSurname() { return authorSurname; }
+std::string Book::getAuthorSurname() const { return authorSurname; }
 // Return Book's Copyright Date
-Date Book::getCopyrightsDate() { return copyrightsDate; }
+Date Book::getCopyrightsDate() const { return copyrightsDate; }
 // Return Book's Availability
-bool Book::getAvailable() { return available; }
+bool Book::getAvailable() const { return available; }
 
 // Set Book Availability
 void Book::bookReturn() { available = true; }
 void Book::bookLoan() { available = false; }
 // Check if Copyright Date is specified
-bool Book::isDateInserted() { return dateInserted; }
+bool Book::isDateInserted() const { return dateInserted; }
+// Check if ISBN code is a valid one
+void Book::isbnIsValid(std::string bookIsbn) const {
+  if (bookIsbn.size() != 13) {
+    throw std::invalid_argument(
+        "Invalid ISBN argument: It must be 13 characters long");
+  }
+}
 
 // Comparison operators overload
 bool operator==(Book a, Book b) { return a.getIsbn() == b.getIsbn(); }

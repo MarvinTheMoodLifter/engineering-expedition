@@ -14,7 +14,7 @@ private:
   bool dateInserted;
 
 public:
-  Book() = default;
+  Book();
   // Constructor with every parameter
   Book(std::string autName, std::string autSurname, std::string bookTitle,
        std::string bookIsbn, Date bookCopyrightsDate, bool bookIsAvailable);
@@ -29,23 +29,25 @@ public:
        std::string bookIsbn, Date bookCopyrightsDate);
 
   // Return ISBN of the Book
-  std::string getIsbn();
+  std::string getIsbn() const;
   // Return Title of the Book
-  std::string getTitle();
+  std::string getTitle() const;
   // Return Book's author name
-  std::string getAuthorName();
+  std::string getAuthorName() const;
   // Return Book's author surname
-  std::string getAuthorSurname();
+  std::string getAuthorSurname() const;
   // Return Book's Copyright Date
-  Date getCopyrightsDate();
+  Date getCopyrightsDate() const;
   // Return Book's Availability
-  bool getAvailable();
+  bool getAvailable() const;
 
   // Set Book Availability
   void bookReturn();
   void bookLoan();
   // Check if Copyright Date is specified
-  bool isDateInserted();
+  bool isDateInserted() const;
+  // Check if ISBN code is a valid one
+  void isbnIsValid(std::string bookIsbn) const;
 };
 
 // Comparison operators overload
