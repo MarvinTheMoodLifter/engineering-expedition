@@ -14,6 +14,7 @@ private:
   bool dateInserted;
 
 public:
+  // Default Constructor
   Book();
   // Constructor with every parameter
   Book(std::string autName, std::string autSurname, std::string bookTitle,

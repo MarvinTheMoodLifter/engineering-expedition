@@ -17,7 +17,7 @@ make
 ```
 # If you are not using CMake 
 
-Compile with the following command ("Test" is just a placeholder, you can choose to name the file as you like)
+Compile with the following command ("Test" is just a placeholder, you can choose to name the file as you like):
 
 ```bash
 cd src
@@ -45,10 +45,10 @@ g++ main.cpp Book.cpp BookShelf.cpp Date.cpp -idirafter ../include -o Test.out
 	`isLeapYear()` sets a different value for the last day of february, so `isValid()` can correctly check the date according to the year.
 	
 * `BookShelf.cpp`
-
-
-
-
+  
+	`BookShelf` objects are initialized using an integer value that sets the initial size.
+    `Book` objects can be added to the shelf using the `push_back(Book)` and removed with `pop_back()` member functions.
+    The `size()` function can be used to obtain the number of books in the shelf.
 
 ## Folder structure
 ```bash
