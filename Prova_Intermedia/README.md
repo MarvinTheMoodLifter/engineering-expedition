@@ -22,7 +22,7 @@ Compile with the following command ("Test" is just a placeholder, you can choose
 ```bash
 cd src
 
-g++ main.cpp Book.cpp BookShelf.cpp Date.cpp -idirafter ../include -o Test.out`
+g++ main.cpp Book.cpp BookShelf.cpp Date.cpp -idirafter ../include -o Test.out
 
 // then execute using
 ./Test.out
