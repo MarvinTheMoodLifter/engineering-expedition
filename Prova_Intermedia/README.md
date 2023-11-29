@@ -24,7 +24,7 @@ cd src
 
 g++ main.cpp Book.cpp BookShelf.cpp Date.cpp -idirafter ../include -o Test.out
 
-// then execute using
+# then execute using
 ./Test.out
 ```
 
