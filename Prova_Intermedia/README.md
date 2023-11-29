@@ -1,18 +1,17 @@
 # Prova intermedia di programmazione
 # HOW TO RUN
+extract the content of this zip file
 
-#extract the content of this zip file
 # if you are using CMake
 (see folder structure at the end of the README)
 
-compile with
+```shell
+cd build
+cmake ..
+make
+./main
 
-``
-
-
-execute with
-
-``
+```
 
 # if you are not using CMake 
 
