@@ -1,28 +1,33 @@
 # Prova intermedia di programmazione
 # HOW TO RUN
+extract the content of this zip file
 
-#extract the content of this zip file
-# if you are using CMake
-(see folder structure at the end of the README)
+# If you are using CMake
+> see folder structure at the end of the README
 
-compile with
+```bash
+cd build
 
-``
+cmake ..
 
+make
 
-execute with
+./main
 
-``
+```
+# If you are not using CMake 
 
-# if you are not using CMake 
+Compile with the following command ("Test" is just a placeholder, you can choose to name the file as you like):
 
-compile with the following command ("Test" is just a placeholder, you can choose to name the file as you like)
+```bash
+cd src
 
-` g++  main.cpp Book.cpp BookShelf.cpp Date.cpp -idirafter ../include -o Test `
+g++ main.cpp Book.cpp BookShelf.cpp Date.cpp -idirafter ../include -o Test.out
 
-then execute using
+# then execute using
+./Test.out
+```
 
-` ./Test.out `
 
 
 # Some information about the implementation
@@ -40,10 +45,10 @@ then execute using
 	`isLeapYear()` sets a different value for the last day of february, so `isValid()` can correctly check the date according to the year.
 	
 * `BookShelf.cpp`
-
-
-
-
+  
+	`BookShelf` objects are initialized using an integer value that sets the initial size.
+    `Book` objects can be added to the shelf using the `push_back(Book)` and removed with `pop_back()` member functions.
+    The `size()` function can be used to obtain the number of books in the shelf.
 
 ## Folder structure
 ```bash

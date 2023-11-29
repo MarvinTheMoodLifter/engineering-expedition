@@ -3,7 +3,6 @@
 #include <stdexcept>
 
 // Default Constructor
-// Book::Book() { isbn = "000-000-000-0"; }
 Book::Book() = default;
 
 // Constructor with every parameter
@@ -100,6 +99,6 @@ void operator<<(std::ostream &out, Book a) {
               << a.getAuthorName() << '\n'
               << a.getAuthorSurname() << '\n'
               << a.getIsbn() << '\n'
-              << "Data Copyright non inserita" << '\n';
+              << "Copyright Date not defined." << '\n';
   }
 }

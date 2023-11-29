@@ -14,7 +14,7 @@ public:
   int year(void);
 
   // Verifies if the date is valid
-  bool is_valid();
+  bool isValid();
   // Check if the year is a leap year, return the days in februray
   int isLeapYear();
 };

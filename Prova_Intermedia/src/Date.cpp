@@ -5,7 +5,7 @@
 Date::Date() : y{1970}, m{1}, d{1} {}
 // Constructor which throw and error if the date is not valid
 Date::Date(int yy, int mm, int dd) : y{yy}, m{mm}, d{dd} {
-  if (!is_valid())
+  if (!isValid())
     throw std::invalid_argument("Invalid Date");
 }
 
@@ -15,7 +15,7 @@ int Date::day(void) { return d; }
 int Date::year(void) { return y; }
 
 // Verifies if the date is valid
-bool Date::is_valid() {
+bool Date::isValid() {
   int leapMonth = isLeapYear();
   if (m < 1 || m > 12)
     return false;
