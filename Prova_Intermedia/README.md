@@ -5,7 +5,7 @@ extract the content of this zip file
 # If you are using CMake
 > see folder structure at the end of the README
 
-```shell
+```bash
 cd build
 
 cmake ..
@@ -19,7 +19,7 @@ make
 
 Compile with the following command ("Test" is just a placeholder, you can choose to name the file as you like)
 
-```shell
+```bash
 cd src
 
 g++ main.cpp Book.cpp BookShelf.cpp Date.cpp -idirafter ../include -o Test.out`
