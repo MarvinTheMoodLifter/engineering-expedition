@@ -2,26 +2,32 @@
 # HOW TO RUN
 extract the content of this zip file
 
-# if you are using CMake
-(see folder structure at the end of the README)
+# If you are using CMake
+> see folder structure at the end of the README
 
 ```shell
 cd build
+
 cmake ..
+
 make
+
 ./main
 
 ```
+# If you are not using CMake 
 
-# if you are not using CMake 
+Compile with the following command ("Test" is just a placeholder, you can choose to name the file as you like)
 
-compile with the following command ("Test" is just a placeholder, you can choose to name the file as you like)
+```shell
+cd src
 
-` g++  main.cpp Book.cpp BookShelf.cpp Date.cpp -idirafter ../include -o Test `
+g++ main.cpp Book.cpp BookShelf.cpp Date.cpp -idirafter ../include -o Test.out`
 
-then execute using
+// then execute using
+./Test.out
+```
 
-` ./Test.out `
 
 
 # Some information about the implementation
