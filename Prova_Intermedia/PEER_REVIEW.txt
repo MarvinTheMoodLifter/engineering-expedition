@@ -1,0 +1,13 @@
+Peer Review con il gruppo Tavo Capitale
+
+Il codice esegue le richieste dell'esercitazione senza errori di compilazione, dimostrando una corretta implementazione.
+
+Abbiamo notato interessanti variazioni nell'applicazione di concetti simili.
+
+La classe Bookshelf fornisce tutte le funzionalità richieste, gestendo l'allocazione dinamica di memoria in modo accurato per evitare memory leak.
+La classe Date dispone di diversi costruttori, il che garantisce all'utente una maggiore flessibilità nei parametri da inserire.
+La classe Book si comporta in modo efficiente e soddisfa le aspettative.
+
+Nel main sono presenti delle funzioni di controllo corrette, ma scarsamente documentate: si potrebbe aggiungere qualche commento esplicativo per semplificare la lettura del codice.
+
+Abbiamo apprezzato l'utilizzo di CMake, il quale semplifica sensibilmente il processo di compilazione.
