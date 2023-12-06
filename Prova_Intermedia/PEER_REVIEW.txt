@@ -6,7 +6,7 @@ Abbiamo notato interessanti variazioni nell'applicazione di concetti simili.
 
 La classe Bookshelf fornisce tutte le funzionalità richieste, gestendo l'allocazione dinamica di memoria in modo accurato per evitare memory leak.
 
-La classe Date dispone di diversi costruttori, il che garantisce all'utente una maggiore flessibilità nei parametri da inserire.Tuttavia abbiamo riscontrato un problema con nel caso in cui venga inserita una data nel formato "giorno/mese" senza quindi l'anno. Verrà restituito un valore casuale come anno e non verranno generati errori, salvo che la data inserita sia "29/02" e il valore casuale utilizzato come anno non sia bisestile.
+La classe Date dispone di diversi costruttori, il che garantisce all'utente una maggiore flessibilità nei parametri da inserire. Tuttavia abbiamo riscontrato un problema nel caso in cui venga inserita una data nel formato "giorno/mese" senza quindi l'anno. Verrà restituito un valore casuale come anno e non verranno generati errori, salvo che la data inserita sia "29/02" e il valore casuale utilizzato come anno non sia bisestile.
 
 La classe Book si comporta in modo efficiente e soddisfa le aspettative,tuttavia da notare la mancanza di un setAvailability() nel secondo costruttore.
 
